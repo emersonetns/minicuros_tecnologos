@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+<title>
+    {% block titulo %}  {% block title %}{% endblock title %}{% endblock titulo %}
+</title>
+    {% block style %}
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/style.css" media="screen"/>
+    {% endblock style %}
+    {% block scripts %}
+  <script type="text/javascript" src="{{ MEDIA_URL }}/jquery.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}/maskedinput.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}/site.js"></script>>
+    {% endblock scripts %}
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+    </div> <!-- end #header -->
+    <div id="page">
+	    <div id="header-pic"></div>
+	    <div id="content">
+		    <div class="post">
+			    <h2 class="title"> {% block subtitle %}<center>  Semana de Tecnologia </center> {% endblock subtitle %} </h2>
+                <div class="entry">  <br>                       
+         <center>
+<!--                    <a href="http://tecnologos.iff.edu.br"><h2>Voltar a Página Inicial<h2></a> -->
+                    <h3><a href="http://tecnologos.iff.edu.br">1ª Semana Regional dos Cursos Superiores de Tecnologia</a></h3>
+                    <h4>15 a 17 de agosto de 2011</h4></center>
+                    <center> {% block conteudo %} {% endblock conteudo %} </center>
+                </div>
+            </div>
+        </div> <!-- end #content -->
+        <div style="clear:both; margin:0;"></div>
+    </div> <!-- end #page -->
+</div>
+<div id="footer">          
+<p> &copy; Coordenação Adjunta de Administração e Desenvolvimento de Sistemas <br> DTIC - IFF Campus Campos-Centro.
+
+<a href="http://www.djangoproject.com/"> Made with Django. </a></p>
+</div> <!-- end #footer -->
+</body>
+</html>   
